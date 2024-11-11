@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tickets</title>
+</head>
+<body>
+    <h1>HELP DESK TICKETS</h1>
+    <h3>TICKET LIST</h3>
+    <a href="{% url 'ticket_create' %}">Create a new ticket</a>
+    <ul>
+        {% for ticket in tickets %}
+            <li>{{ ticket.title }} - {{ ticket.created_at }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
